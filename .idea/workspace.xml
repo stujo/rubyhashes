@@ -139,7 +139,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/notes/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="0" selection-start="6284" selection-end="6284" vertical-scroll-proportion="0.19871795" vertical-offset="1947" max-vertical-offset="3180">
+            <state line="136" column="0" selection-start="6300" selection-end="6300" vertical-scroll-proportion="0.19871795" vertical-offset="1947" max-vertical-offset="3180">
               <folding />
             </state>
           </provider>
@@ -618,7 +618,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25769854" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22128852" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22128852" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -916,7 +916,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/notes/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="0" selection-start="6284" selection-end="6284" vertical-scroll-proportion="0.19871795" vertical-offset="1947" max-vertical-offset="3180">
+        <state line="136" column="0" selection-start="6300" selection-end="6300" vertical-scroll-proportion="0.19871795" vertical-offset="1947" max-vertical-offset="3180">
           <folding />
         </state>
       </provider>
