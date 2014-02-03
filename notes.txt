@@ -1,0 +1,28 @@
+#Declaring a new Hash instance
+
+creditcard = { 
+  "name" => "Billy Bob", 
+  "number" => "4444333322221111", 
+  "code" => "555",
+  "expiry" => "07/2016"
+}
+
+
+#How about adding new key value pairs?
+
+creditcard['exp_year']=2016
+
+creditcard['exp_month']=7
+
+#How about deleting values?
+
+creditcard.delete "expiry"
+
+
+#What about JSON?
+
+creditcard.to_json
+
+require 'json'
+
+creditcard.to_json

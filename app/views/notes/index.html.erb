@@ -1,0 +1,206 @@
+<% content_for :title do %>Hashes in Ruby
+<% end %>
+<ol class="breadcrumb">
+  <li class="active">Hash Notes</li>
+</ol>
+<h1 id="hashes" class="page-header"><%= yield(:title) %></h1>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#hashIntro">
+          Introduction
+        </a>
+      </h4>
+    </div>
+    <div id="hashIntro" class="panel-collapse collapse">
+      <div class="panel-body">
+        <ul>
+          <li>Everything in Ruby is an object and Hash is a built in ruby object class
+          </li>
+          <li>Hashes are collections of unique object keys and their associated object values</li>
+          <li>If you’re coming in from other programming languages, hashes are similar to types like
+            <ul>
+              <li><a href="http://docs.oracle.com/javase/7/docs/api/java/util/HashMap.html">Java HashMap</a></li>
+              <li><a href="http://msdn.microsoft.com/en-us/library/xfhwa508(v=vs.110).aspx">.NET Dictionary</a></li>
+              <li><a href="http://php.net/manual/en/language.types.array.php">PHP Associative Array</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#hashWhyCare">
+          Why Should I Care?
+        </a>
+      </h4>
+    </div>
+    <div id="hashWhyCare" class="panel-collapse collapse">
+      <div class="panel-body">
+        <ul>
+          <li><%= link_to "Rails Form Parameters", notes_sandwich_path %></li>
+          <li>JSON
+            <a href="http://json.org/example.html">http://json.org/example.html</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#hashBasics">
+          Basic Usage of Hash
+        </a>
+      </h4>
+    </div>
+    <div id="hashBasics" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h4>Creating Hash Objects</h4>
+        <ul>
+          <li><a href="/codesample/declare_empty_hash_braces">Empty Hash with braces</a></li>
+          <li><a href="/codesample/declare_empty_hash_new">Empty Hash with Hash.new</a></li>
+          <li><a href="/codesample/declare_with_symbols">Declare with symbols as keys</a></li>
+          <li><a href="/codesample/declare_with_strings">Declare with strings as keys</a></li>
+          <li><a href="/codesample/symbols_vs_strings">Symbols or Strings as keys</a></li>
+        </ul>
+
+        <h4>Commonly Used Methods</h4>
+        <ul>
+          <li><a href="/codesample/hash_get_value">hsh.[] - Get value for key</a></li>
+          <li><a href="/codesample/hash_set_value">hsh.[]= - Set value for key</a></li>
+          <li><a href="/codesample/hash_has_key">hsh.has_key? - Check for key existence</a></li>
+          <li><a href="/codesample/hash_empty">hsh.empty? - Contains something or not</a></li>
+          <li><a href="/codesample/hash_length">hsh.length - How many</a></li>
+          <li><a href="/codesample/hash_each">hsh.each - do block for each key,value</a></li>
+          <li><a href="/codesample/hash_clear">hsh.clear - Remove all entries</a></li>
+          <li><a href="/codesample/hash_delete">hsh.delete(key) - Remove specified entry</a></li>
+          <li><a href="/codesample/hash_merge">hsh.merge - Overwrite with other hash</a></li>
+          <li><a href="/codesample/hash_select">hsh.select - New hash with block passed pairs</a></li>
+          <li><a href="/codesample/hash_keys">hsh.keys - Array of keys</a></li>
+          <li><a href="/codesample/hash_values">hsh.values - Array of values</a></li>
+          <li><a href="/codesample/hash_with_default">Hash.new(0) - Specify default value</a></li>
+          <li><a href="/codesample/hash_fetch">hsh.fetch - When you want control over defaults</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#hashAdvanced">
+          More Hash
+        </a>
+      </h4>
+    </div>
+    <div id="hashAdvanced" class="panel-collapse collapse">
+      <div class="panel-body">
+        <h4>Creating Hash Objects</h4>
+        <ul>
+          <li><a href="/codesample/declare_empty_hash_with_array">Hash[] from array</a></li>
+          <li><a href="/codesample/hash_from_to_h">to_h</a></li>
+        </ul>
+
+        <h4>More Methods</h4>
+        <ul>
+          <li><a href="/codesample/symbols_vs_strings_advanced">More Symbols or Strings as keys</a></li>
+          <li><a href="/codesample/hash_delete_if">Removing items via Enumeration</a></li>
+          <li><a href="/codesample/hash_default_proc">Generate default values with a Proc</a>
+   <ul><li><a href="http://endofline.wordpress.com/2010/12/24/hash-tricks/">http://endofline.wordpress.com/2010/12/24/hash-tricks/</a></li></ul>
+          </li>
+          <li><a href="/codesample/hash_hash">hsh.hash - Not a Hash!</a></li>
+<!-- 
+          <li>hsh == b Is this hash the same as another hash</li>
+          <li>hsh.assoc Find a key value pair or nil</li>
+          <li>hsh.compare_by_identity Use object ids instead of equality for lookups</li>
+          <li>hsh.default Returns the default value that would be used</li>
+          <li>hsh.default= Sets the default value</li>
+          <li>hsh.default_proc Returns the proc to be executed on failing lookup</li>
+          <li>hsh.default_proc= Assigns a  default proc</li>
+          <li>hsh.default_proc= proc do |hash,key| "default for #{key}" end</li>
+          <li>Cool uses of default_proc</li>
+          <li>http://endofline.wordpress.com/2010/12/24/hash-tricks/</li>
+          <li>hsh.each_key</li>
+          <li>hsh.each_pair</li>
+          <li>hsh.each_value</li>
+          <li>hsh.eql?</li>
+           -->
+          <li><a href="/codesample/hash_flatten">hsh.flatten - Keys and values into a unidimensional array</a></li>
+
+<!-- 
+          <li>hsh.has_value?</li>
+          <li>hsh.hash</li>
+ -->      
+          <li>hsh.include? hsh.key? hsh.member? hsh.has_key?</li>
+<!--       
+          <li>hsh.inspect</li>
+          <li>hsh.keep_if opposite of delete_if</li>
+          <li>key - Looks up the first occurrence of the value</li>
+          <li>merge! - Destructive Merge</li>
+          <li>rassoc - Find key value pair by value</li>
+          <li>reject - new hash without failing pairs (opposite of select)</li>
+          <li>reject! - delete_if</li>
+          <li>select! - keep_if</li>
+          <li>size - same as length</li>
+          <li>store same as []=</li>
+ -->
+          <li><a href="/codesample/hash_invert">hsh.invert - Swaps keys and values</a></li>
+          <li><a href="/codesample/hash_replace">hsh.replace - Replace Contents</a></li>
+          <li><a href="/codesample/hash_shift">hsh.shift - Pops first item off of hash</a></li>
+          <li><a href="/codesample/hash_rehash">hsh.rehash - If using unfrozen objects as keys</a></li>
+          <li>hsh.to_a - Array of pairs</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#hashResources">
+          Resources
+        </a>
+      </h4>
+    </div>
+    <div id="hashResources" class="panel-collapse collapse">
+      <div class="panel-body">
+        <ul>
+          <li>Ruby Core Docs
+            <a href="http://www.ruby-doc.org/core-2.1.0/Hash.html">http://www.ruby-doc.org/core-2.1.0/Hash.html</a>
+          </li>
+          <li>Rails ActiveSupport Methods
+            <a href="http://api.rubyonrails.org/classes/Hash.html">http://api.rubyonrails.org/classes/Hash.html</a>
+            <ul>
+              <li><a href="/codesample/symbols_vs_strings_advanced">symbolize_keys</a></li>
+              <li><a href="/codesample/hash_to_param">to_param</a></li>
+              <li><a href="/codesample/hash_slice">slice</a></li>
+            </ul>
+          </li>
+          <li>Related Classes
+            <ul>
+              <li>Array
+                <a href="http://www.ruby-doc.org/core-2.1.0/Array.html">http://www.ruby-doc.org/core-2.1.0/Array.html</a>
+              </li>
+              <li>Enumerable
+                <a href="http://www.ruby-doc.org/core-2.1.0/Enumerable.html">http://www.ruby-doc.org/core-2.1.0/Enumerable.html</a>
+              </li>
+              <li>Enumerator
+                <a href="http://www.ruby-doc.org/core-2.1.0/Enumerator.html">http://www.ruby-doc.org/core-2.1.0/Enumerator.html</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    <!--
+    if (window.location.hash) {
+        $(window.location.hash).addClass("in");
+    }
+    -->
+</script>
