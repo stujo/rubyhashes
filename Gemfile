@@ -53,6 +53,8 @@ end
 
 gem 'bootstrap_form'
 
+gem 'coderay'
+
 group :development do
  gem 'guard-rspec', require: false
 # gem 'better_errors'

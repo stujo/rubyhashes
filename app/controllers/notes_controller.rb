@@ -9,6 +9,7 @@ class NotesController < ApplicationController
   CREATE_SYMBOL_HASH_GROMIT = 'gromit = { name: "Gromit", dob: Date.new(2001,7,4) ,address: {street: "100 Main Road", town: "Wensleydale", postcode: "WCH 33Z" } }'
   CREATE_SYMBOL_HASH_WITH_DEFAULT = 'hsh = Hash.new("N/A")'
 
+  #TODO: Move these to a Model class
   @@code_samples =
       {
           declare_empty_hash_braces: 'hsh = {}',
@@ -51,7 +52,7 @@ class NotesController < ApplicationController
           hash_merge: [CREATE_SYMBOL_HASH , CREATE_SYMBOL_HASH_GROMIT,  'result = hsh.merge gromit', 'p hsh', 'result'].join("\n"),
           hash_destructive_merge_with_result: [CREATE_SYMBOL_HASH , CREATE_SYMBOL_HASH_GROMIT,  'p hsh.merge! gromit', 'hsh'].join("\n"),
 
-          hash_select: [CREATE_SYMBOL_HASH,  'result = hsh.select {|key,value| value.include? "a" }', 'p hsh', 'result'].join("\n"),
+          hash_select: [CREATE_SYMBOL_HASH,  'result = hsh.select {|key,value| value.is_a? String }', 'p hsh', 'result'].join("\n"),
           hash_keys: [CREATE_SYMBOL_HASH_GROMIT,  'gromit.keys'].join("\n"),
           hash_values: [CREATE_SYMBOL_HASH_GROMIT,  'gromit.values'].join("\n"),
           hash_values: [CREATE_SYMBOL_HASH_GROMIT,  'gromit.values'].join("\n"),
@@ -79,6 +80,7 @@ class NotesController < ApplicationController
           hash_invert: [CREATE_SYMBOL_HASH, 'hsh[:nickname]="Wallace"', 'p hsh.invert','hsh'],
           hash_replace: [CREATE_SYMBOL_HASH,CREATE_SYMBOL_HASH_GROMIT, 'p hsh.object_id','hsh.replace gromit','p hsh', 'p hsh.object_id'],
           hash_shift: [CREATE_SYMBOL_HASH, 'p hsh.shift','hsh'],
+          hash_to_a: [CREATE_SYMBOL_HASH_GROMIT,'gromit.to_a'],
 
           code_sample_syntax_error_demo: [CREATE_SYMBOL_HASH, 'p hsh', 'hsh.sze']
     }
@@ -104,7 +106,7 @@ class NotesController < ApplicationController
     unless @formvalues.nil?
       defaults = @formvalues.to_h
     else
-      defaults = {email: 'gromit@example.com', name: 'Gromit', sandwich: 'Corned Beef'}
+      defaults = {sandwich: 'Meatless Mike'}
     end
 
     @sandwiches = [
@@ -194,14 +196,19 @@ class NotesController < ApplicationController
     @sandwich = SandwichForm.new (defaults)
   end
 
+  def beautify_code_sample(sample)
+    sample.gsub(/{/,"{\n ").gsub(/}/,"\n}")
+  end
+
   def code_sample
     @code_sample_options = @@code_samples.keys.map{|key| [key, "codesample/" + key.to_s]}
     @sample_name = params.require('name')
     @sample_path = "codesample/" + @sample_name.to_s
     @code_sample = @@code_samples.fetch @sample_name.to_sym, nil
-    redirect_to notes_home_path if @code_sample.nil?
+    redirect_to notes_home_path, :alert => "Code Sample Missing" if @code_sample.nil?
     @code_sample = @code_sample.join("\n") if @code_sample.is_a? Array
-    std_output = StringIO.new; 
+
+    std_output = StringIO.new;
     std_error = StringIO.new; 
 
     begin 
@@ -223,6 +230,8 @@ class NotesController < ApplicationController
 
     @std_error = std_error.string
     @std_output = std_output.string
+    @code_sample = beautify_code_sample(@code_sample)
+
   end
 
 end

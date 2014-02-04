@@ -58,7 +58,7 @@
     </div>
     <div id="hashBasics" class="panel-collapse collapse">
       <div class="panel-body">
-        <h4>Creating Hash Objects</h4>
+        <h4>Creating Hash Objects - Code Samples</h4>
         <ul>
           <li><a href="/codesample/declare_empty_hash_braces">Empty Hash with braces</a></li>
           <li><a href="/codesample/declare_empty_hash_new">Empty Hash with Hash.new</a></li>
@@ -66,8 +66,7 @@
           <li><a href="/codesample/declare_with_strings">Declare with strings as keys</a></li>
           <li><a href="/codesample/symbols_vs_strings">Symbols or Strings as keys</a></li>
         </ul>
-
-        <h4>Commonly Used Methods</h4>
+        <h4>Commonly Used Methods - Code Samples</h4>
         <ul>
           <li><a href="/codesample/hash_get_value">hsh.[] - Get value for key</a></li>
           <li><a href="/codesample/hash_set_value">hsh.[]= - Set value for key</a></li>
@@ -81,13 +80,16 @@
           <li><a href="/codesample/hash_select">hsh.select - New hash with block passed pairs</a></li>
           <li><a href="/codesample/hash_keys">hsh.keys - Array of keys</a></li>
           <li><a href="/codesample/hash_values">hsh.values - Array of values</a></li>
-          <li><a href="/codesample/hash_with_default">Hash.new(0) - Specify default value</a></li>
-          <li><a href="/codesample/hash_fetch">hsh.fetch - When you want control over defaults</a></li>
+        </ul>
+        <h4>Rails ActiveSupport Methods</h4>
+        <ul>
+          <li><a href="/codesample/symbols_vs_strings_advanced">symbolize_keys</a></li>
+          <li><a href="/codesample/hash_to_param">to_param</a></li>
+          <li><a href="/codesample/hash_slice">slice</a></li>
         </ul>
       </div>
     </div>
   </div>
-
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
@@ -98,21 +100,22 @@
     </div>
     <div id="hashAdvanced" class="panel-collapse collapse">
       <div class="panel-body">
-        <h4>Creating Hash Objects</h4>
+        <h4>More Ways to Create Hash Objects - Code Samples</h4>
         <ul>
           <li><a href="/codesample/declare_empty_hash_with_array">Hash[] from array</a></li>
           <li><a href="/codesample/hash_from_to_h">to_h</a></li>
         </ul>
-
-        <h4>More Methods</h4>
+        <h4>More Code Samples</h4>
         <ul>
+          <li><a href="/codesample/hash_with_default">Hash.new(0) - Specify default value</a></li>
+          <li><a href="/codesample/hash_fetch">hsh.fetch - When you want control over defaults</a></li>
           <li><a href="/codesample/symbols_vs_strings_advanced">More Symbols or Strings as keys</a></li>
           <li><a href="/codesample/hash_delete_if">Removing items via Enumeration</a></li>
           <li><a href="/codesample/hash_default_proc">Generate default values with a Proc</a>
-   <ul><li><a href="http://endofline.wordpress.com/2010/12/24/hash-tricks/">http://endofline.wordpress.com/2010/12/24/hash-tricks/</a></li></ul>
+            <ul><li><a href="http://endofline.wordpress.com/2010/12/24/hash-tricks/">http://endofline.wordpress.com/2010/12/24/hash-tricks/</a></li></ul>
           </li>
           <li><a href="/codesample/hash_hash">hsh.hash - Not a Hash!</a></li>
-<!-- 
+          <!-- 
           <li>hsh == b Is this hash the same as another hash</li>
           <li>hsh.assoc Find a key value pair or nil</li>
           <li>hsh.compare_by_identity Use object ids instead of equality for lookups</li>
@@ -129,13 +132,12 @@
           <li>hsh.eql?</li>
            -->
           <li><a href="/codesample/hash_flatten">hsh.flatten - Keys and values into a unidimensional array</a></li>
-
-<!-- 
+          <!-- 
           <li>hsh.has_value?</li>
           <li>hsh.hash</li>
- -->      
-          <li>hsh.include? hsh.key? hsh.member? hsh.has_key?</li>
-<!--       
+ -->
+          <li><a href="/codesample/hash_has_key">hsh.include? hsh.key? hsh.member? hsh.has_key?</a></li>
+          <!--       
           <li>hsh.inspect</li>
           <li>hsh.keep_if opposite of delete_if</li>
           <li>key - Looks up the first occurrence of the value</li>
@@ -151,12 +153,11 @@
           <li><a href="/codesample/hash_replace">hsh.replace - Replace Contents</a></li>
           <li><a href="/codesample/hash_shift">hsh.shift - Pops first item off of hash</a></li>
           <li><a href="/codesample/hash_rehash">hsh.rehash - If using unfrozen objects as keys</a></li>
-          <li>hsh.to_a - Array of pairs</li>
-
+          <li><a href="/codesample/hash_to_a">hsh.to_a - Array of pairs</a></li>
         </ul>
       </div>
     </div>
-  </div>  
+  </div>
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
@@ -173,11 +174,6 @@
           </li>
           <li>Rails ActiveSupport Methods
             <a href="http://api.rubyonrails.org/classes/Hash.html">http://api.rubyonrails.org/classes/Hash.html</a>
-            <ul>
-              <li><a href="/codesample/symbols_vs_strings_advanced">symbolize_keys</a></li>
-              <li><a href="/codesample/hash_to_param">to_param</a></li>
-              <li><a href="/codesample/hash_slice">slice</a></li>
-            </ul>
           </li>
           <li>Related Classes
             <ul>
@@ -197,10 +193,12 @@
     </div>
   </div>
 </div>
+
+
 <script>
-    <!--
-    if (window.location.hash) {
-        $(window.location.hash).addClass("in");
-    }
-    -->
+  <!--
+  if (window.location.hash) {
+      $(window.location.hash).addClass("in");
+  }
+  -->
 </script>

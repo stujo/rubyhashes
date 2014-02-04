@@ -3,12 +3,10 @@ class SandwichForm
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :name, :email, :sandwich, :options
+  attr_accessor :name, :sandwich, :options
 
   validates_presence_of :name
   validates_presence_of :sandwich
-  validates_format_of :email, :with => /\A[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}\z/i
-  validates_length_of :sandwich, :maximum => 500
 
   def initialize(attributes = {})
     attributes.each do |name, value|

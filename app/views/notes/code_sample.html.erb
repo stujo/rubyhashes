@@ -1,11 +1,11 @@
 <% content_for :title do %>Code Sample:
-  <%= @sample_name %>
+    <%= @sample_name %>
 <% end %>
 <ol class="breadcrumb">
   <li><%= link_to 'Hash Notes', notes_home_path %></li>
   <li><%= link_to 'More', notes_home_path(:anchor => 'hashAdvanced') %></li>
   <li><%= link_to 'Basic Use', notes_home_path(:anchor => 'hashBasics') %></li>
-  <li class="active"><%= yield(:title)%></li>
+  <li class="active"><%= yield(:title) %></li>
 </ol>
 <form class="form-inline" novalidate="novalidate" role="form">
   <label>Select a sample:</label>
@@ -19,7 +19,7 @@
 <hr>
 <h1 id="sandwich" class="page-header">Code Sample:
   <%= @sample_name %></h1>
-<PRE><%= h @code_sample %></PRE>
+<%= raw CodeRay.scan(@code_sample, :ruby).div(:line_numbers => :table) %>
 <hr/>
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">
@@ -33,26 +33,28 @@
     <div id="codeResult" class="panel-collapse collapse">
       <div class="panel-body">
         <% unless @code_result.nil? %>
-          <h4><%= h @code_result.class %></h4>
+            <h4><%= @code_result.class %></h4>
+            <%= raw CodeRay.scan(@code_result, :ruby).div(:break_lines => true) %>
+        <% else %>
+        <PRE>nil</PRE>
         <% end %>
-        <PRE><%= h @code_result.inspect %></PRE>
         <% unless @std_output.to_s == '' %>
-          <div class="alert alert-info">
-          <h4>STDOUT</h4>
-          <PRE><%= h @std_output %></PRE>
-          </div>
+            <div class="alert alert-info">
+              <h4>STDOUT</h4>
+              <PRE><%= h @std_output %></PRE>
+            </div>
         <% end %>
         <% unless @std_error.to_s == '' %>
-          <div class="alert alert-warning">
-          <h4>STDERR</h4>
-          <PRE><%= h @std_error %></PRE>
-          </div>
+            <div class="alert alert-warning">
+              <h4>STDERR</h4>
+              <PRE><%= h @std_error %></PRE>
+            </div>
         <% end %>
         <% unless @syntax_error.nil? %>
-          <div class="alert alert-danger">
-          <h4>Syntax Error</h4>
-          <PRE><%= h @syntax_error %></PRE>
-          </div>
+            <div class="alert alert-danger">
+              <h4>Syntax Error</h4>
+              <PRE><%= h @syntax_error %></PRE>
+            </div>
         <% end %>
       </div>
     </div>

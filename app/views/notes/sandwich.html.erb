@@ -29,10 +29,12 @@
 
         <div class="well">
           <% unless @ancestry.nil? %>
-              <% @ancestry[1..-1].each do |kl| %>
-                  <%= kl.to_s %> &lt;
+              <% @ancestry.each_with_index do |kl, index| %>
+                  <%= (index > 0) ? '<' : '' %>
+                  <span <%= raw Hash == kl ? 'class="superbold"' : '' %>>
+                  <%= kl.to_s %>
+                  </span>
               <% end %>
-              <%= @ancestry[-1].to_s %>
           <% end %>
         </div>
       </div>
@@ -42,7 +44,6 @@
 <% end %>
 <%= bootstrap_form_for(@sandwich, url: notes_sandwich_path) do |f| %>
     <%= f.text_field :name %>
-    <%= f.email_field :email %>
     <%= f.select(:sandwich, @sandwiches) %>
     <%= f.select(:options, [['Mustard', 'mustard'],
                             ['Cheese', 'cheese'],

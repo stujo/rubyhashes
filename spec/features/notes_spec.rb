@@ -30,7 +30,7 @@ end
 
 feature 'Visitor to code sample page' do
   scenario 'syntax error sample' do
-     visit code_sample_code_sample_syntax_error_demo_path
+     visit notes_code_sample_path(:code_sample_syntax_error_demo)
      expect(page).to have_content('Syntax Error')
   end
 

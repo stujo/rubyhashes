@@ -3,4 +3,7 @@
   <data-source source="LOCAL" name="Rails hashes: development" uuid="3d25ed3e-5ca4-4d1e-b799-0926402f1861">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source source="LOCAL" name="Rails hashes: test" uuid="9012c521-5684-4a36-82d8-2c0e270d1b7d">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>
