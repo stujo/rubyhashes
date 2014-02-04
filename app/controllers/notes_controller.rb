@@ -205,33 +205,35 @@ class NotesController < ApplicationController
     @sample_name = params.require('name')
     @sample_path = "codesample/" + @sample_name.to_s
     @code_sample = @@code_samples.fetch @sample_name.to_sym, nil
-    redirect_to notes_home_path, :alert => "Code Sample Missing" if @code_sample.nil?
-    @code_sample = @code_sample.join("\n") if @code_sample.is_a? Array
+    if @code_sample.nil?
+      redirect_to notes_home_path, :alert => "Code Sample Missing"
+    else
+      @code_sample = @code_sample.join("\n") if @code_sample.is_a? Array
 
-    std_output = StringIO.new;
-    std_error = StringIO.new; 
+      std_output = StringIO.new;
+      std_error = StringIO.new;
 
-    begin 
-        $stdout = std_output
-        $stderr = std_error
-        @code_result = Kernel.eval(@code_sample)
-    rescue SyntaxError => se
-        @syntax_error = se    
-    rescue NameError => ne
-        @syntax_error = ne 
-    rescue TypeError => te   
-        @syntax_error = te
-    rescue ArgumentError => ae
-      @syntax_error = ae
-    ensure
-        $stdout = STDOUT 
-        $stderr = STDERR 
+      begin
+          $stdout = std_output
+          $stderr = std_error
+          @code_result = Kernel.eval(@code_sample)
+      rescue SyntaxError => se
+          @syntax_error = se
+      rescue NameError => ne
+          @syntax_error = ne
+      rescue TypeError => te
+          @syntax_error = te
+      rescue ArgumentError => ae
+        @syntax_error = ae
+      ensure
+          $stdout = STDOUT
+          $stderr = STDERR
+      end
+
+      @std_error = std_error.string
+      @std_output = std_output.string
+      @code_sample = beautify_code_sample(@code_sample)
     end
-
-    @std_error = std_error.string
-    @std_output = std_output.string
-    @code_sample = beautify_code_sample(@code_sample)
-
   end
 
 end

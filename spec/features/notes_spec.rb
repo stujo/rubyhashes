@@ -30,8 +30,13 @@ end
 
 feature 'Visitor to code sample page' do
   scenario 'syntax error sample' do
-     visit notes_code_sample_path(:code_sample_syntax_error_demo)
-     expect(page).to have_content('Syntax Error')
+    visit notes_code_sample_path(:code_sample_syntax_error_demo)
+    expect(page).to have_content('Syntax Error')
+  end
+
+  scenario 'syntax error sample' do
+    visit notes_code_sample_path(:hash_delete)
+    expect(page).to have_content('STDOUT')
   end
 
 end
