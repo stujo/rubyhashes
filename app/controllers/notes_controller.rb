@@ -81,6 +81,7 @@ class NotesController < ApplicationController
           hash_replace: [CREATE_SYMBOL_HASH,CREATE_SYMBOL_HASH_GROMIT, 'p hsh.object_id','hsh.replace gromit','p hsh', 'p hsh.object_id'],
           hash_shift: [CREATE_SYMBOL_HASH, 'p hsh.shift','hsh'],
           hash_to_a: [CREATE_SYMBOL_HASH_GROMIT,'gromit.to_a'],
+          hash_diff: [CREATE_SYMBOL_HASH, CREATE_SYMBOL_HASH_GROMIT,'p gromit.diff hsh','p hsh.diff gromit'],
 
           code_sample_syntax_error_demo: [CREATE_SYMBOL_HASH, 'p hsh', 'hsh.sze']
     }
