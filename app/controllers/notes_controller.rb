@@ -197,7 +197,7 @@ class NotesController < ApplicationController
   end
 
   def beautify_code_sample(sample)
-    sample.gsub(/{/,"{\n ").gsub(/}/,"\n}")
+    sample #sample.gsub(/{/,"{\n ").gsub(/}/,"\n}")
   end
 
   def code_sample

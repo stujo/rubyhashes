@@ -47,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Guardfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Guardfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Guardfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="64" selection-start="672" selection-end="672" vertical-scroll-proportion="0.2777778" vertical-offset="0" max-vertical-offset="648">
+            <state line="12" column="64" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
@@ -101,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sandwich_form.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sandwich_form.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/sandwich_form.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="21" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+            <state line="5" column="21" selection-start="139" selection-end="139" vertical-scroll-proportion="0.113464445" vertical-offset="0" max-vertical-offset="661">
               <folding />
             </state>
           </provider>
@@ -1013,13 +1013,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/sandwich_form.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="21" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/notes/sandwich.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="63" selection-start="1308" selection-end="1308" vertical-scroll-proportion="-10.791667" vertical-offset="236" max-vertical-offset="975">
@@ -1078,7 +1071,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Guardfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="64" selection-start="672" selection-end="672" vertical-scroll-proportion="0.2777778" vertical-offset="0" max-vertical-offset="648">
+        <state line="12" column="64" selection-start="672" selection-end="672" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/sandwich_form.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="21" selection-start="139" selection-end="139" vertical-scroll-proportion="0.113464445" vertical-offset="0" max-vertical-offset="661">
           <folding />
         </state>
       </provider>
