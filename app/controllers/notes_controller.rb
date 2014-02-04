@@ -5,7 +5,7 @@ class NotesController < ApplicationController
   end
 
   CREATE_SYMBOL_HASH = 'hsh = { name: "Wallace", dob: Date.new(1955,2,14), lang: "British English", favourite: "Vegan Captain Kirk" }'
-  CREATE_STRING_HASH = 'hsh2 = { "name" => "Wallace", "dob" => Date.new(1955,2,14) "lang" => "British English", "favourite" => "Vegan Captain Kirk" }'
+  CREATE_STRING_HASH = 'hsh2 = { "name" => "Wallace", "dob" => Date.new(1955,2,14), "lang" => "British English", "favourite" => "Vegan Captain Kirk" }'
   CREATE_SYMBOL_HASH_GROMIT = 'gromit = { name: "Gromit", dob: Date.new(2001,7,4) ,address: {street: "100 Main Road", town: "Wensleydale", postcode: "WCH 33Z" } }'
   CREATE_SYMBOL_HASH_WITH_DEFAULT = 'hsh = Hash.new("N/A")'
 
