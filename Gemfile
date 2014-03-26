@@ -67,4 +67,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
 end
+# CodeClimate Connect code quality with test coverage
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 ruby  '2.1.0'
