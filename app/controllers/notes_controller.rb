@@ -219,7 +219,13 @@ class NotesController < ApplicationController
 
 
   def run_code_sample sample
-    Kernel.eval(sample)
+    #Kernel.eval(sample)
+
+    sandbox = Shikashi::Sandbox.new
+    privileges = Shikashi::Privileges.new
+    privileges.allow_all
+    sandbox.run(privileges, sample)
+
   end
 
   def eval_current_code_sample

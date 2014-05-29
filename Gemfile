@@ -71,3 +71,7 @@ end
 gem "codeclimate-test-reporter", group: :test, require: nil
 
 ruby  '2.1.0'
+
+#sandboxing
+gem 'shikashi'
+
