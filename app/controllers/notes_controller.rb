@@ -218,6 +218,10 @@ class NotesController < ApplicationController
   end
 
 
+  def run_code_sample sample
+    Kernel.eval(sample)
+  end
+
   def eval_current_code_sample
     std_output = StringIO.new;
     std_error = StringIO.new;
@@ -225,7 +229,7 @@ class NotesController < ApplicationController
     begin
       $stdout = std_output
       $stderr = std_error
-      @code_result = Kernel.eval(@code_sample)
+      @code_result = run_code_sample @code_sample
     rescue SyntaxError => se
       @syntax_error = se
     rescue NameError => ne
